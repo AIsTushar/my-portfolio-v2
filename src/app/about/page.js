@@ -26,6 +26,7 @@ const AnimatedNumber = ({ value }) => {
         ref.current.textContent = latest.toFixed(0);
       }
     });
+    console.log("hello");
     return () => unsubscribe();
   }, [sprintValue, value]);
 
