@@ -6,6 +6,8 @@ import profilePhoto from "../../../public/images/profile/developer-pic-2.jpg";
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 const AnimatedNumber = ({ value }) => {
   const ref = useRef(null);
@@ -26,7 +28,7 @@ const AnimatedNumber = ({ value }) => {
         ref.current.textContent = latest.toFixed(0);
       }
     });
-    console.log("hello");
+
     return () => unsubscribe();
   }, [sprintValue, value]);
 
@@ -108,6 +110,8 @@ function page() {
         </div>
 
         <Skills />
+        <Experience />
+        <Education />
       </div>
     </main>
   );
