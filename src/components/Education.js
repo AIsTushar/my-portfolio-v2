@@ -4,7 +4,7 @@ import { useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 import LiIcons from "./LiIcons";
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({ type, time, place, info }) => {
   const ref = useRef(null);
   return (
     <li
@@ -17,16 +17,11 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className=" capitalize text-2xl font-bold">
-          {position}&nbsp;{" "}
-          <a href={companyLink} target="_blank" className="text-blue-500">
-            @{company}
-          </a>
-        </h3>
-        <span className=" capitalize font-medium text-black/75">
-          {time} | {address}
+        <h3 className=" capitalize text-2xl font-bold">{type}&nbsp;</h3>
+        <span className="capitalize font-medium text-slate-500">
+          {time} | {place}
         </span>
-        <p className="font-medium w-full">{work}</p>
+        <p className="font-medium w-full">{info}</p>
       </motion.div>
     </li>
   );
@@ -49,46 +44,24 @@ function Education() {
         />
         <ul className="w-full flex flex-col items-center justify-between ml-4">
           <Details
-            position=" Intern"
-            company="Facebook"
-            companyLink="https://www.facebook.com/"
+            type="Computer Science And Engineering"
             time="Summer 2021"
-            address="Menlo Park, CA."
-            work="Worked on a team responsible for developing a new mobile app feature that allowed users to create and 
-share short-form video content, including designing and implementing a new user interface and developing 
-the backend infrastructure to support the feature."
+            place="East West University"
+            info="I have completed my bachelor's degree in Computer Science and Engineering from East West University. Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Web Programming."
           />
 
           <Details
-            position=" Intern"
-            company="Facebook"
-            companyLink="https://www.facebook.com/"
+            type="Computer Science And Engineering"
             time="Summer 2021"
-            address="Menlo Park, CA."
-            work="Worked on a team responsible for developing a new mobile app feature that allowed users to create and 
-share short-form video content, including designing and implementing a new user interface and developing 
-the backend infrastructure to support the feature."
+            place="East West University"
+            info="I have completed my bachelor's degree in Computer Science and Engineering from East West University. Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Web Programming."
           />
 
           <Details
-            position=" Intern"
-            company="Facebook"
-            companyLink="https://www.facebook.com/"
+            type="Computer Science And Engineering"
             time="Summer 2021"
-            address="Menlo Park, CA."
-            work="Worked on a team responsible for developing a new mobile app feature that allowed users to create and 
-share short-form video content, including designing and implementing a new user interface and developing 
-the backend infrastructure to support the feature."
-          />
-          <Details
-            position=" Intern"
-            company="Facebook"
-            companyLink="https://www.facebook.com/"
-            time="Summer 2021"
-            address="Menlo Park, CA."
-            work="Worked on a team responsible for developing a new mobile app feature that allowed users to create and 
-share short-form video content, including designing and implementing a new user interface and developing 
-the backend infrastructure to support the feature."
+            place="East West University"
+            info="I have completed my bachelor's degree in Computer Science and Engineering from East West University. Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Web Programming."
           />
         </ul>
       </div>

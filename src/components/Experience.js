@@ -23,7 +23,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
             @{company}
           </a>
         </h3>
-        <span className=" capitalize font-medium text-black/75">
+        <span className=" capitalize font-medium text-slate-500">
           {time} | {address}
         </span>
         <p className="font-medium w-full">{work}</p>

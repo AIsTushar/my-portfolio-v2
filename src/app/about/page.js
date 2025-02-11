@@ -28,8 +28,6 @@ const AnimatedNumber = ({ value }) => {
         ref.current.textContent = latest.toFixed(0);
       }
     });
-
-    return () => unsubscribe();
   }, [sprintValue, value]);
 
   return <span ref={ref}></span>;
