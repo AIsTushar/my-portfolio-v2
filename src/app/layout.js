@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -16,7 +17,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>
+      <head>
+        <Script id="theme-switcher" strategy="beforeInteractive">
+          {`document.documentElement.classList.toggle(
+  "dark",
+  localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+);`}
+        </Script>
+      </head>
+      <body className={`${montserrat.className} antialiased dark:bg-black`}>
         <Navbar />
         <main className="flex items-center w-full text-black">{children}</main>
         <Footer />

@@ -5,6 +5,7 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -17,6 +18,9 @@ export default {
       backgroundImage: {
         circularLight:
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #fff 5px, #fff 100px);",
+
+        circularDark:
+          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px, #000 8px, #000 100px);",
       },
     },
   },

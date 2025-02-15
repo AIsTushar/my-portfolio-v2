@@ -3,8 +3,15 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { usePathname } from "next/navigation";
-import { GithubIcon, LinkedInIcon, TwitterIcon } from "./Icons";
+import {
+  GithubIcon,
+  LinkedInIcon,
+  MoonIcon,
+  SunIcon,
+  TwitterIcon,
+} from "./Icons";
 import { motion } from "framer-motion";
+import useTheamswitcher from "./hooks/useTheamswitcher";
 
 const CustomLinks = ({ href, title, className = "" }) => {
   const pathname = usePathname();
@@ -14,7 +21,7 @@ const CustomLinks = ({ href, title, className = "" }) => {
       <span
         className={`absolute h-[1px] bg-black left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
           pathname === href ? "w-full" : "w-0"
-        }`}
+        } dark:bg-white`}
       >
         &nbsp;
       </span>
@@ -23,8 +30,9 @@ const CustomLinks = ({ href, title, className = "" }) => {
 };
 
 function Navbar() {
+  const [mode, setMode] = useTheamswitcher();
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between relative">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between relative dark:text-white">
       <nav>
         <CustomLinks title="Home" href="/" className="mr-4" />
         <CustomLinks title="About" href="/about" className="mx-4" />
@@ -32,6 +40,7 @@ function Navbar() {
         <CustomLinks title="Blog" href="/blog" className="ml-4" />
       </nav>
 
+      {/* Social Midea Icons */}
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a
           href="/"
@@ -66,6 +75,19 @@ function Navbar() {
         >
           <TwitterIcon />
         </motion.a>
+
+        <button
+          className={`ml-3 rounded-full flex items-center justify-center w-6 ${
+            mode === "light" ? "bg-black text-white" : "bg-white text-black"
+          }`}
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+        >
+          {mode === "dark" ? (
+            <SunIcon className={"fill-black"} />
+          ) : (
+            <MoonIcon className={"fill-dark"} />
+          )}
+        </button>
       </nav>
 
       <div className=" absolute left-[50%] top-2 translate-x-[-50%]">

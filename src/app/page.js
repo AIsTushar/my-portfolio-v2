@@ -7,8 +7,8 @@ import HireMe from "@/components/HireMe";
 
 export default function Home() {
   return (
-    <div className="w-full h-full inline-block z-0 bg-white p-32 pt-0">
-      <div className="flex items-center justify-between w-full">
+    <div className="w-full h-full inline-block z-0 bg-white p-32 pt-0 dark:bg-black">
+      <div className="flex items-center justify-between w-full dark:text-white">
         <div className="w-1/2">
           <Image src={profilePic} alt="Picture" className="w-full h-auto" />
         </div>
@@ -28,13 +28,13 @@ export default function Home() {
               href="/azizul_islam_tushar.pdf"
               target="_blank"
               download={true}
-              className="flex items-center py-2.5 px-6 bg-black text-white rounded-lg text-lg font-semibold border-2 border-solid border-transparent hover:bg-white hover:text-black hover:border-black"
+              className="flex items-center py-2.5 px-6 bg-black text-white rounded-lg text-lg font-semibold border-2 border-solid border-transparent hover:bg-white hover:text-black hover:border-black dark:bg-white dark:text-black dark:border-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white"
             >
               Resume <LinkArrow className={"w-6 ml-1"} />
             </Link>
             <Link
               href="mailto:azizultushar98@gmail.com"
-              className="ml-4 text-lg font-medium capitalize underline"
+              className="ml-4 text-lg font-medium capitalize underline dark:text-white"
             >
               Contact
             </Link>

@@ -36,12 +36,12 @@ const AnimatedNumber = ({ value }) => {
 function page() {
   return (
     <main className="flex flex-col w-full items-center justify-center">
-      <div className="w-full h-full inline-block z-0 bg-white p-32 pt-16">
+      <div className="w-full h-full inline-block z-0 bg-white p-32 pt-16 dark:bg-black dark:text-white">
         <AnimatedText text="Passion Fuels Purpose!" className="mb-16" />
 
         <div className="grid grid-cols-8 w-full gap-16">
           <div className="col-span-3 flex flex-col items-start justify-start">
-            <h2 className="mb-4 text-lg font-bold uppercase text-black/75">
+            <h2 className="mb-4 text-lg font-bold uppercase text-black/75 dark:text-white/75">
               About Me
             </h2>
             <p className="font-medium">
@@ -66,8 +66,8 @@ function page() {
           </div>
 
           {/* Profile Pictire */}
-          <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8">
-            <div className="absolute top-0 -right-3 -z-10 rounded-[2rem] w-[102%] h-[103%] bg-black" />
+          <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8 dark:bg-black dark:border-white">
+            <div className="absolute top-0 -right-3 -z-10 rounded-[2rem] w-[102%] h-[103%] bg-black dark:bg-white" />
             <Image
               src={profilePhoto}
               alt="My photo"
@@ -82,7 +82,7 @@ function page() {
               <span className="text-6xl font-bold">
                 <AnimatedNumber value={50} />+
               </span>
-              <h2 className="text-xl font-medium capitalize text-black/75">
+              <h2 className="text-xl font-medium capitalize text-black/75 dark:text-white/75">
                 Something
               </h2>
             </div>
@@ -91,7 +91,7 @@ function page() {
               <span className="text-6xl font-bold">
                 <AnimatedNumber value={40} />+
               </span>
-              <h2 className="text-xl font-medium capitalize text-black/75">
+              <h2 className="text-xl font-medium capitalize text-black/75 dark:text-white/75">
                 Something
               </h2>
             </div>
@@ -100,7 +100,7 @@ function page() {
               <span className="text-6xl font-bold">
                 <AnimatedNumber value={10} />+
               </span>
-              <h2 className="text-xl font-medium capitalize text-black/75">
+              <h2 className="text-xl font-medium capitalize text-black/75 dark:text-white/75">
                 Something
               </h2>
             </div>

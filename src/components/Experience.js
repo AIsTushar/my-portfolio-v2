@@ -18,7 +18,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className=" capitalize text-2xl font-bold">
-          {position}&nbsp;{" "}
+          {position}&nbsp;
           <a href={companyLink} target="_blank" className="text-blue-500">
             @{company}
           </a>
@@ -45,7 +45,7 @@ function Experience() {
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className=" absolute left-[2.15rem] top-0 w-[4px] h-full bg-black origin-top"
+          className=" absolute left-[2.15rem] top-0 w-[4px] h-full bg-black origin-top dark:bg-white"
         />
         <ul className="w-full flex flex-col items-center justify-between ml-4">
           <Details

@@ -7,26 +7,26 @@ function LiIcons({ reference }) {
   });
 
   return (
-    <figure className="absolute left-0 stroke-black">
+    <figure className="absolute left-0 stroke-black dark:stroke-white">
       <svg className="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
-        <motion.circle
+        <circle
           cx="50"
           cy="50"
           r="20"
-          className="stroke-pink-400 stroke-1 fill-none"
+          className="stroke-pink-400 dark:stroke-green-300 stroke-1 fill-none"
         />
         <motion.circle
           style={{ pathLength: scrollYProgress }}
           cx="50"
           cy="50"
           r="20"
-          className=" stroke-[5px] fill-white"
+          className=" stroke-[5px] fill-white dark:fill-black"
         />
-        <motion.circle
+        <circle
           cx="50"
           cy="50"
           r="10"
-          className="animate-pulse stroke-1 fill-pink-400"
+          className="animate-pulse stroke-1 fill-pink-400 dark:fill-green-300"
         />
       </svg>
     </figure>

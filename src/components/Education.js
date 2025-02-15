@@ -40,7 +40,7 @@ function Education() {
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className=" absolute left-[2.15rem] top-0 w-[4px] h-full bg-black origin-top"
+          className=" absolute left-[2.15rem] top-0 w-[4px] h-full bg-black origin-top dark:bg-white"
         />
         <ul className="w-full flex flex-col items-center justify-between ml-4">
           <Details
